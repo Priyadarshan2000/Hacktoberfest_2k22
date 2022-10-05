@@ -1,8 +1,8 @@
-  
+
   ![image](https://user-images.githubusercontent.com/62868878/193399597-df087ffd-c518-4afe-a6a0-1b768fbeda97.png)
 
   
-# Hi <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px"> HACKTOBERFEST 2021 IS HERE :bangbang::bangbang::bangbang:
+# Hi <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px"> HACKTOBERFEST 2022 IS HERE :bangbang::bangbang::bangbang:
 
 :performing_arts: **What is Hacktoberfest ?**
 
@@ -83,7 +83,7 @@ This year, the first 55,000 participants can earn a T-shirt.
 
 
 ``$ cd <cloned-folder>`` 
-``$ git remote add upstream https://github.com/Priyadarshan2000/HACKTOBERFEST-2021.git ``
+``$ git remote add upstream https://github.com/Priyadarshan2000/Hacktoberfest_2k22.git ``
 ******
 
 #### 4️⃣ Now synchronize your forked repo:
