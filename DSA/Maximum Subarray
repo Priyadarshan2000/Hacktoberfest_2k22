@@ -1,0 +1,38 @@
+// Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
+
+A subarray is a contiguous part of an array.
+
+
+Code: 
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int maxSubArray(vector<int>& nums) 
+{
+            int maxSum=INT_MIN,curSum=0;
+            for(int i=0;i<nums.size();++i)
+            {
+                curSum+=nums[i];
+                if(curSum>maxSum)
+                    maxSum=curSum;
+                if(curSum<0)
+                    curSum=0;
+            }
+            return maxSum;
+}
+    
+int main()
+{
+  vector<int>nums;
+  int n;
+  cin>>n;
+  for(int i=0;i<n;++i)
+  {
+    int data;
+    cin>>data;
+    nums.push_back(data);
+  }
+  cout<<maxSubArray(nums);
+  return 0;
+}
