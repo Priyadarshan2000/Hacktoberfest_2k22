@@ -1,0 +1,66 @@
+// Given an array nums with n objects colored red, white, or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the 
+    order red, white, and blue. //
+
+Basic Intution:
+The solo objective of the question is to make the array in ascending order such that the resultant array consist of numbers in the sequence of 0's-->1's-->2's.
+
+Brute
+Sort the array using the inbuilt sort() function will do the job. However, the approach won't be so basic for a medium level question.
+
+Bit Improved Apporach
+We can keep a count of the number of 0's, 1's and 2's in separate variables. Then according to the respective counts we can easily modify the given array with the given order of sequence.
+
+
+Optimised Approach by Dutch National Flag Algorithm
+The intution is to keep three pointers which will iterate over the entire array and swap values accordingly.
+
+Let the pointers be named as low,mid and high with initial locations at low=mid=0, and high=nums.size()-1;
+With a single iteration we need to check three conditions:
+Whether the nums[mid] : 0---> then swap(nums[low],nums[mid])--->increment both the pointers by 1.
+Whether the nums[mid] : 1--->then increment only the mid pointer by 1.
+Whether the nums[mid] : 2--->then swap(nums[mid],nums[high])--->decrement only the high pointer by 1.
+This entire iteration will run only while mid<=high. This will ensure that all the numbers to the left of low will be 0,all the numbers to the right of high will be 2. Eventually the middle of that range will consist only 1.
+
+
+
+Code: 
+#include<bits/stdc++.h>
+using namespace std;
+
+void sortColors(vector<int>& nums) 
+{
+        //Dutch National Flag Algorithm
+        int low=0,mid=0,high=nums.size()-1;
+        while(mid<=high)
+        {
+            if(nums[mid]==0)
+            {
+                swap(nums[low],nums[mid]);
+                low++;
+                mid++;
+            }
+            else if(nums[mid]==1)
+                mid++;
+            else
+            {
+                swap(nums[mid],nums[high]);
+                high--;
+            }
+        }
+    
+}
+int main()
+{
+  vector<int>nums;
+  int n;
+  cin>>n;
+  for(int i=0;i<n;++i)
+  {
+    int data;
+    cin>>data;
+    nums.push_back(data);
+  }
+  sortColors(nums);
+  return 0;
+}
+    

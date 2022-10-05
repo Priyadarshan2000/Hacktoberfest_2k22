@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+int markers[2]={0,0};
+int count=1;
+int max=1;
+int start=0;
+int end=0;
+int len=1;
+int length;
+int nums[21];
+int i=0;
+printf("Enter the integer count:");
+scanf("%d",&length);
+printf("Enter the integers:");
+for(i=0;i<length;i++)
+scanf("%d", &nums[i]);
+nums[i]=0;
+for(i=0;i<length;i++)
+{
+if(nums[i+1]>nums[i])
+{
+end++;
+len++;
+}
+else
+{
+
+if(len>max)
+{
+markers[0]=start;
+markers[1]=end;
+count=1;
+max=len;
+
+}
+
+start=i+1;
+len=1;
+end=i+1;
+
+}
+}
+printf("Longest is from %d to %d\n",markers[0],markers[1]);
+for(i=markers[0];i<=markers[1];i++)
+printf("%d ",nums[i]);
+return 0;
+}

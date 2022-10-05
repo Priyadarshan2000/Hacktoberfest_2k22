@@ -1,0 +1,76 @@
+//The next permutation of an array of integers is the next lexicographically greater permutation of its integer. More formally, if all the permutations of the 
+array are sorted in one container according to their lexicographical order, then the next permutation of that array is the permutation that follows it in 
+the sorted container. If such arrangement is not possible, the array must be rearranged as the lowest possible order (i.e., sorted in ascending order).
+Given an array of integers nums, find the next permutation of nums.//
+
+Intution:
+If we look carefully to the sample inputs we will always find an increasing order for a certain breakpoint.
+For e.g. in [1 2 3], the next permutation will be [1 3 2] ---> 1<3>2. Similarily in [2 1 3], the next permutation will be [2 3 1]--->2<3>1.
+The only time this won't apply is when the given input is in decreasing order.
+So, we can traverse from back and check for the index position whose value is lesser than its prior index position's value. Let's store it in a variable--idx1.
+Next, we have to again traverse from back and check which value is greater than the idx1 position value. Swap the places to get the possible next greater element.
+However, this swap will only ensure the correctness of breakpoint. We need to then, reverse the rest array elements to the right side of the breakpoint in order to 
+find the next permutation.
+
+Edge case
+When the given array is in decreasing order, the next permutation will be the same array in reverse order. So in that case we can simply just reverse the 
+entire array. For e.g. [3 2 1] --> [1 2 3].
+
+
+Code:
+#include<bits/stdc++.h>
+using namespace std;
+
+void nextPermutation(vector<int>& nums) {
+        //linearly travelling from back and check which index has a[i]<a[i+1].
+    int idx1,i;
+    for(i=nums.size()-2;i>=0;--i)
+    {
+        if(nums[i]<nums[i+1])
+        {
+            idx1=i;
+            break;
+        }
+    }
+    if(i<0)
+    {
+        reverse(nums.begin(),nums.end());
+        return;
+    }
+    //linearly traversing from back and check a[idx]<a[i], then swap.
+    int idx2;
+    for(int l=nums.size()-1;l>=0;--l)
+    {
+        if(nums[idx1]<nums[l])
+        {
+            idx2=l;
+            break;
+        }
+    }
+    swap(nums[idx1],nums[idx2]);
+    //reversing all right elements from idx1+1 position to get smallest possible combination.
+    
+    int j=idx1+1;
+    int k=nums.size()-1;
+    while(j<k)
+    {
+        swap(nums[j],nums[k]);
+        j++;
+        k--;
+    }
+}
+
+int main()
+{
+  int n;
+  cin>>n;
+  vector<int>nums;
+  for(int i=0;i<n;++i)
+  {
+    int data;
+    cin>>data;
+    nums.push_back(data);
+  }
+  nextPermutation(nums);
+  return 0;
+}

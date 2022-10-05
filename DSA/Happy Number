@@ -1,0 +1,52 @@
+//Write an algorithm to determine if a number n is happy.
+
+A happy number is a number defined by the following process:
+
+Starting with any positive integer, replace the number by the sum of the squares of its digits.
+Repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1.
+Those numbers for which this process ends in 1 are happy.
+Return true if n is a happy number, and false if not. //
+
+
+Intuition:
+
+Single digit numbers apart from 1 and 7, are not happy numbers.
+So if n==1 or n==7 then directly return true.
+Otherwise, run the loop until n>9, i.e. when the number of digits are greater than 1.
+Inside this main loop, access individual digits of the number(n) and perform the square operation followed by sum.
+This sum if equals to either 1 or 7, then we can return true. Else continue the loop, untill the sum becomes a single digit number.
+Lastly, if 1 or 7 doesnot appear, then return false.
+
+
+Code:
+#include<bits/stdc++.h>
+using namespace std;
+
+bool isHappy(int n) 
+{
+        if(n==1 || n==7)
+        return true;
+    
+        while(n>9)
+        {
+            int sum=0;
+            while(n>0)
+            {
+                int r=n%10;
+                sum+=r*r;
+                n/=10;
+            }
+            if(sum==1 || sum==7)
+                return true;
+            n=sum;
+        }
+        return false;
+}
+int main()
+{
+  int n;
+  cin>>n;
+  cout<<isHappy(n);
+  return 0;
+}
+

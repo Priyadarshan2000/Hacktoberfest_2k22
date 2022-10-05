@@ -1,0 +1,47 @@
+// There are n kids with candies. You are given an integer array candies, where each candies[i] represents the number of candies the ith kid has, and an integer extraCandies, denoting the number of extra candies that you have.
+
+Return a boolean array result of length n, where result[i] is true if, after giving the ith kid all the extraCandies, they will have the greatest number of candies among all the kids, or false otherwise.
+
+Note that multiple kids can have the greatest number of candies.//
+
+
+Intuition:
+Simply finding out the current maximum value of a candy from the given set of candies would be the first thing to be looked upon.
+To achieve this one can perform a normal iterative search using a single loop,which will take a time complexity of O(n) at worst case. 
+Another approach could be sorting the given array in decreasing order to get the maximum element, This would again give O(nlogn) at worst case if sort() 
+STL is considered. The best way in C++ would be inbuilt STL for finding maximum element in vector *max_element().
+Next, iterate over the the array, and add the extra candies to each of the candies present in the array. When the sum becomes >= to *max_element() 
+store true in bool type vector or else false.
+The checking can be sometimes tricky regarding time. A normal if-else is giving better than 58%. To improve this, apply the concept of ternary operator. 
+It would ensure 100%.
+
+
+Code:
+#include<bits/stdc++.h>
+using namespace std;
+
+vector<bool> kidsWithCandies(vector<int>& candies, int extraCandies) 
+{
+        int maxVal;
+        vector<bool>ans;
+        maxVal=*max_element(candies.begin(), candies.end()); 
+        for(int i=0;i<candies.size();++i)
+            candies[i]+extraCandies>=maxVal?ans.push_back(true):ans.push_back(false);
+        return ans;
+}
+int main()
+{
+  vector<int>candies;
+  int extraCandies;
+  int n;
+  cin>>n;
+  for(int i=0;i<n;++i)
+  {
+    int data;
+    cin>>data;
+    candies.push_back(data);
+  }
+  cin>>extraCandies;
+  kidsWithCandies(candies,extraCandies);
+  return 0;
+}

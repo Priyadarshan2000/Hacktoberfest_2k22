@@ -1,0 +1,57 @@
+#include <stdio.h>
+int main()
+{
+    int n, m, i, j, a = 0, b = 0, arr[100][100];
+    printf("enter row: ");
+    scanf("%d", &m);
+    printf("enter colums: ");
+    scanf("%d", &n);
+    printf("\ninput matrix:\n");
+    for (i = 0; i < m; i++)
+    {
+        for (j = 0; j < n; j++)
+        {
+            scanf("%d", &arr[i][j]);
+        }
+    }
+    printf("\nthe matrix is:\n");
+    for (i = 0; i < m; i++)
+    {
+        for (j = 0; j < n; j++)
+        {
+            printf("%d\t", arr[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n spiral matrix:\n");
+    while (a < m && b < n)
+    {
+        for (i = b; i < n; i++)
+        {
+            printf("%d ", arr[a][i]);
+        }
+        a++;
+        for (i = a; i < m; i++)
+        {
+            printf("%d ", arr[i][n - 1]);
+        }
+        n--;
+        if (a < m)
+        {
+            for (i = n - 1; i >= b; i--)
+            {
+                printf("%d ", arr[m - 1][i]);
+            }
+            m--;
+        }
+        if (b < n)
+        {
+            for (i = m - 1; i >= a; i--)
+            {
+                printf("%d ", arr[i][b]);
+            }
+            b++;
+        }
+    }
+    return 0;
+}

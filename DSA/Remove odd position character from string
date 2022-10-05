@@ -1,0 +1,23 @@
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+int k=0;
+char str[20];
+char  str2[20];
+  printf("enter a string: ");
+   gets(str);
+  for (int i = 0; i < strlen(str) ; i++)
+  {
+     if (i%2!=0)
+     {
+        str2[k]=str[i];
+        k++;
+  }
+   
+}
+str2[k]='\0';
+puts(str2);
+return 0;
+}
