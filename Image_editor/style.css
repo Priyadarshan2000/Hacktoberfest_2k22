@@ -1,0 +1,157 @@
+/* importing google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppings, sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: hsla(9, 100%, 64%, 0.5);
+}
+.container{
+    width: 850px;
+    background:rgb(255, 165, 0) ;
+    border-radius: 10px;
+    padding: 30px 35px 35px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+   
+}
+/*.container .disable :where(.editor-panel, .reset-filters, .save-image){
+    opacity: 0.6;
+    pointer-events: none;
+
+}*/
+.container.disable .editor-panel,
+.container.disable .controls .reset-filter,
+.container.disable .controls .save-img{
+  opacity: 0.5;
+  pointer-events: none;
+}
+.container h2{
+    font-size: 42px;
+    font-weight: 500;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-weight: bold;
+   
+
+}
+.container .wrapper{
+    display: flex;
+    margin: 20px 0;
+    min-height: 335px;
+}
+.wrapper .editor-panel{
+    width: 280px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+
+}
+.editor-panel .title{
+    display: block;
+    font-size: 16px;
+    margin-bottom: 12px;
+
+}
+.editor-panel .options, .controls{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.editor-panel button{
+    height: 40px;
+    font-size: 14px;
+    color: rgb(16, 9, 2);
+    margin-bottom: 8px;
+    border-radius: 4px;
+    background: #fff;
+    border: 2px solid #aaa;
+
+
+}
+.editor-panel .filter button{
+    width: calc(100% / 2 - 4px) ;
+}
+.filter button.after{
+    color: aqua;
+    background: #4c26e3;
+    background-color: black;
+}
+.filter .slider{
+    margin-top: 12px;
+}
+.filter .slider .filter-info{
+    display: flex;
+    color: #464646;
+    font-size: 14px;
+    justify-content: space-between;
+}
+.filter .slider input{
+    width: 100%;
+    height:5px;
+    accent-color: #5372f0;
+}
+.editor-panel .rotate{
+    margin-top: 17px;
+
+}
+.editor-panel .rotate button{
+    width: calc(100% / 4 - 3px) ; 
+}
+.rotate button :nth-child(3),
+.rotate button :nth-child(4){
+font-size: 18px;
+}
+.wrapper .preview-image{
+    flex-grow: 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+}
+.preview-image img{
+    max-width: 490px;
+    max-height: 335px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    
+}
+.controls button{
+    font-size: 14px;
+    cursor: pointer;
+    color: #fff;
+    background: #fff;
+    /*background: rgb(226, 9, 9);*/
+    padding: 11px 20px;
+    border-radius: 8px;
+    text-transform:uppercase ;
+}
+.controls .reset-filters{
+    color: #df480cf2;
+    border: 1px solid #6C757D;
+    font-weight: bold;
+
+
+
+}
+.controls .choose-image{
+    background: #6C757D;
+    border: 1px solid #6C757D;
+}
+.controls .save-image{
+    margin-left: 5px;
+    background: #5372f0;
+    border: 1px solid #5372f0;
+}
+
+
+
+
+
