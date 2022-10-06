@@ -1,0 +1,30 @@
+@media screen and (max-width: 760px){
+    .container{
+       padding: 25px;
+    }
+    .container .wrapper{
+        flex-wrap: wrap-reverse;
+    }
+    .wrapper .editor-panel{
+        width: 100%;
+
+    }
+    .wrapper .preview-image{
+        width: 100%;
+        margin: 0 0 15px;
+    }
+
+}
+@media screen and (max-width: 500px){
+    .controls button{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .controls .row{
+        width: 100%;
+    }
+    .controls .row .save-image{
+        margin-left: 0px;
+    }
+
+}
