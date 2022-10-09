@@ -22,34 +22,41 @@ def Game(comp, you):
         elif you =="Rock":
             return True    
 
-print("Computer's Turn -> Rock / Paper / Scissors (computer has decided)\n")
-# Random number generate between 1 and 3
-n=random.randint(1,3)
+print("Welcome to Rock / Paper / Scissors Game!")
 
-if n==1:
-    comp="Rock"
-if n==2:
-    comp="Paper"
-if n==3:
-    comp="Scissors"
+while True:
+    print("Computer's Turn -> Rock / Paper / Scissors (computer has decided)\n")
+    # Random number generate between 1 and 3
+    n=random.randint(1,3)
+
+    if n==1:
+        comp="Rock"
+    if n==2:
+        comp="Paper"
+    if n==3:
+        comp="Scissors"
 
 
-you=input("Your Turn -> 'r' for Rock / 'p' for Paper / 's' for Scissors : \n")
-if you=="r":
-    you="Rock"
-elif you=="p":
-    you="Paper"
-elif you=="s":
-    you="Scissors"
+    you=input("Your Turn -> 'r' for Rock / 'p' for Paper / 's' for Scissors : \n")
+    if you=="r":
+        you="Rock"
+    elif you=="p":
+        you="Paper"
+    elif you=="s":
+        you="Scissors"
 
-print("Computer's choice is : ", comp)
-print("Your choice is : ", you)
+    print("Computer's choice is : ", comp)
+    print("Your choice is : ", you)
 
-result=Game(comp, you)
-if result==None:
-    print("Ohh, It's a tie game")
-elif result:
-    print("Hurrah! You win the game")
-else:
-    print("Sorry! You lose the game")
+    result=Game(comp, you)
+    if result==None:
+        print("Ohh, It's a tie game")
+    elif result:
+        print("Hurrah! You win the game")
+    else:
+        print("Sorry! You lose the game")
 
+    keep_playing=input("Do you want to continue playing? Type 'y' to play again!\n\n")
+    
+    if keep_playing!='y':
+        break
