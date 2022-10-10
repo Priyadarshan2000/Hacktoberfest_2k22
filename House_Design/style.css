@@ -1,0 +1,111 @@
+*{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.banner
+{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(rgb(255, 255, 255),rgba(0,0,0,0.75)),url(Luxurious-interior-design-living-room-and-fireplace-in-a-beautiful-house-scaled.jpeg) ;
+    background-blend-mode: lighten;
+    background-size: cover;
+    background-position: center;
+}
+ .logo
+{
+    width: 20%;
+    height: 140px;
+    cursor: pointer;
+} 
+.navbar
+{
+    width: 85%;
+    margin-left: 20px;
+    margin-right: 10px;
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar ul li
+{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 20px;
+    position:relative;
+}
+.navbar ul li a
+{
+    color: rgb(91, 176, 165);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.navbar ul li::after
+{
+    content: '';
+    height: 3px;
+    background: #009688;
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    position: absolute;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after
+{
+    width: 100%;
+}
+.content
+{
+    width: 100%;
+    top:50%;
+    text-align: center;
+    transform: translateY(-50%);
+    position: absolute;
+}
+.content h1
+{
+    font-size: 70px;
+    margin-top: 80px;
+}
+.content p
+{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px; 
+}
+button
+{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: black;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+span{
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+button:hover span
+{
+    width: 100%;
+}
+button:hover
+{
+    border: none;
+}
