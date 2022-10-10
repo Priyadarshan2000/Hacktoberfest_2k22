@@ -1,0 +1,48 @@
+react-select - The Select Component for React
+react-beautiful-dnd - Beautiful and accessible drag and drop for lists with React
+react-dnd - Drag and Drop for React
+react-grid-layout - A draggable and resizable grid layout with responsive breakpoints
+react-table - A lightweight, fast and extendable datagrid for React
+react-data-grid - Excel-like grid component built with React
+react-draggable - React draggable component
+react-resizable-and-movable - A resizable and draggable component for React
+react-resizable - A simple React component that is resizable with a handle
+react-resizable-box - A resizable component for React
+react-searchbox-awesome - Minimalistic searchbox
+react-sortable-pane - A sortable and resizable pane component for React
+react-spaces - Nestable resizable, anchored, scrollable components
+react-dates - An easily internationalizable, mobile-friendly datepicker library for the web
+react-big-calendar - Calendar component
+react-datepicker - ReactJS Datepicker
+react-list - A versatile infinite scroll React component
+react-intl - Internationalize React apps
+react-i18next - Internationalization for React done right
+react-aria-modal - A fully accessible React modal
+react-hotkeys - Declarative hotkey and focus area management for React
+react-keydown - Lightweight keydown wrapper for React components
+react-joyride - Create guided tours for your apps
+react-virtualized - React components for efficiently rendering large lists and tabular data
+react-window - React components for efficiently rendering large lists and tabular data
+react-text-mask - Input mask for React
+react-loading-skeleton - Create skeleton screens that automatically adapt to your app
+react-spinkit - A collection of loading indicators animated with CSS for React
+rheostat - Accessible slider component built with React
+qrcode.react - QR component for use with React
+react-archer - Draw arrows between React elements
+react-pdf-viewer - A PDF viewer made for React
+react-parallax-tilt - Easily apply tilt hover effect on React components
+react-popper - Position tooltips and popovers in an elegant, performant manner
+react-tsparticles - Easily create highly customizable particles animations
+react-spring - Spring-physics based animation library for React applications
+framer-motion - A React library to power production-ready animations
+react-accessible-accordion - React Component for creating an 'Accordion' that adheres to the WAI ARIA spec for accessibility.
+react-truncate-markup - React component for truncating JSX markup.
+react-cookie - Universal cookies for React
+react-slick - Carousel component built with React
+react-gtm-module - Google Tag Manager Module for React
+react-device-detect - Detect device for React
+react-colorful - A tiny (2,5 KB), dependency-free, fast and accessible color picker component
+react-modal - Accessible modal dialog component for React
+cleave.js - Format input text content when you are typing
+react-fontawesome - Font Awesome 5 React component
+react-advanced-cropper - An advanced React component for image cropping
