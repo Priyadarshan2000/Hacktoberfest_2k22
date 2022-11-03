@@ -3,7 +3,6 @@
 
   
   
-  
 # Hi <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px"> HACKTOBERFEST 2022 IS HERE :bangbang::bangbang::bangbang:
 
 :performing_arts: **What is Hacktoberfest ?**
